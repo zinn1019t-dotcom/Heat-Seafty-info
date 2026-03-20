@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>熱中症対策ナビ</title>
+
+  <!-- スタイル -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ブラウザ用 favicon -->
+  <link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-192.png" sizes="192x192">
+  <!-- 互換用 -->
+  <link rel="shortcut icon" type="image/png" href="favicon-32.png?v=1">
+
+  <!-- iPhone ホーム追加用 -->
+  <link rel="apple-touch-icon" href="apple-touch-icon-180.png" sizes="180x180">
+</head>
+
+<body>
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="title-row">
+    <img
+      src="image.png"
+      alt="熱中症対策ナビ アイコン"
+      class="title-icon"
+    />
+    <div>
+      <h1 class="main-title">熱中症対策ナビ</h1>
+      <p class="main-subtitle-en">Team名:Heat Safety Navigator in Nago</p>
+    </div>
+  </div>
+
+  <p class="main-subtitle">
+    暑い日に、迷わず判断できる学生向け熱中症対策を教えてくれる公式LINEサービスです。
+  </p>
+
+  <div class="hero-buttons" id="top-buttons">
+    <a href="#overview" class="btn primary">ナビについて</a>
+    <a href="demo.html" class="btn primary">LINE動作デモ</a>
+    <a href="https://direct-preview-695a55d2e78885f605f99f30.monaca.education/#do"
+       target="_blank"
+       class="btn primary"
+       rel="noopener noreferrer">
+      やっちゃダメリスト
+    </a>
+    <a href="https://direct-preview-69686be5e788853347b4044d.monaca.education/"
+       target="_blank"
+       class="btn primary"
+       rel="noopener noreferrer">
+      119通報
+    </a>
+    <a href="https://direct-preview-696f30aae788859f27b4043c.monaca.education/"
+       target="_blank"
+       class="btn primary"
+       rel="noopener noreferrer">
+      あつさ天気予報
+    </a>
+    <a href="https://direct-preview-695fb519e78885a66275e8c2.monaca.education/"
+       target="_blank"
+       class="btn primary"
+       rel="noopener noreferrer">
+      熱中症対策クイズ
+    </a>
+    <a href="#contest" class="btn primary">全国情報コン応募作品として</a>
+    <a href="#survey" class="btn primary">アンケート</a>
+  </div>
+</header>
+
+<!-- 機能検索ボックス -->
+<section class="feature-search-area">
+  <div class="feature-search-inner">
+    <label for="featureSearchInput" class="feature-search-label">
+      機能を検索
+    </label>
+    <div class="feature-search-box">
+      <input
+        type="text"
+        id="featureSearchInput"
+        class="feature-search-input"
+        placeholder="例：動作デモ / やっちゃダメリスト など"
+      />
+      <button type="button" id="featureSearchButton" class="feature-search-button">
+        🔍
+      </button>
+    </div>
+    <p class="feature-search-hint">
+      キーワードを入れて Enter または 🔍 を押すと、該当する機能の説明へ移動します。
+    </p>
+    <p class="feature-search-message" id="featureSearchMessage"></p>
+  </div>
+</section>
+
+
+  <!-- 全国情報コン向け紹介ブロック（追加①：上部） -->
+  <section id="contest" class="section">
+    <div class="card">
+      <h2>全国情報教育コンテスト 応募作品としての位置づけ</h2>
+      <p>
+        「熱中症対策ナビ ― 判断を『行動』に変える高校生向け支援システム ―
+        として応募しています。」は、
+        第3回 全国情報教育コンテスト（デジタル学園祭）に全国情報教育コンテストにHeat Safety Navigator in Nagoというチーム名で応募している作品です。
+      </p>
+      <ul>
+        <li><strong>一言キャッチ：</strong>危険度の「わからない」をなくし、「どう行動すればよいか」を高校生に示す熱中症対策ナビ。</li>
+        <li><strong>主な利用者：</strong>名護商工高校の生徒を中心とした高校生。</li>
+        <li><strong>作品の形：</strong>LINE公式アカウントを使った、学生向け熱中症対策支援サービス（LINE BOT＋Web紹介ページ）。</li>
+      </ul>
+      <p>
+        日常の学校生活で直面する「暑さの中での判断の難しさ」に対して、
+        データ（天気・WBGT・体調入力など）と生成AIを組み合わせ、
+        高校生が自分で行動を選びやすくなるよう支援することを目指しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- 概要 -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>熱中症対策ナビとは</h2>
+      <p>
+        熱中症対策ナビは、暑い日に「今どれくらい危険か」「どう行動すべきか」を
+        迷わず判断できるようにするための、学生向けの情報支援公式LINEです。
+        気温や暑さの情報を見ても判断が難しい場面を想定し、
+        行動につながる形で情報を整理して届けます。
+      </p>
+    </div>
+  </section>
+
+  <!-- 解決したい課題 -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>解決したい課題</h2>
+      <ul>
+        <li>天気予報や警戒情報はあっても、「どれくらい危険で、どう行動すればよいか」が分かりにくい。</li>
+        <li>「まだ大丈夫だろう」と我慢して体調を悪化させてしまう高校生がいる。</li>
+        <li>逆に不安が強くなり、必要以上に活動を控えてしまうこともある。</li>
+        <li>情報はあるのに、行動に結びつく形で整理されていない。</li>
+      </ul>
+      <p>
+        近年の猛暑で熱中症は誰にでも起こりうる身近な危険となっており、
+        生徒自身が正しく判断し行動できる仕組みを作ることが重要です。
+      </p>
+    </div>
+  </section>
+
+  <!-- できること -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>この公式ラインでできること（特徴）</h2>
+      <ul>
+        <li><strong>🚫 やっちゃダメリスト（あつさヨケル！）</strong>：悪化しやすい行動と理由、代わりの行動を提示</li>
+        <li><strong>✅ 熱中症シュミレーション</strong>：今の自分の体調からどのような行動を取ればいいか教える</li>
+        <li><strong>🌤 天気予報</strong>：AIが天気APIから取得した学校付近の天気予報とWBGTの近似値を計算しその日の参考になるように提示する</li>
+        <li><strong>🗣️ 熱中症に関するクイズ</strong>：専門用語を避け、わかりやすい言葉で熱中症に関するクイズができる</li>
+        <li><strong>🌐熱リポ</strong>：その日の体調（疲労）などをLINEのトークに送信すると、わかりやすい言葉で対策などを教えてくれます。</li>
+      </ul>
+      <p>
+        これらの機能は、熱中症の危険度や行動の目安を分かりやすく提示し、<br>
+        我慢や自己判断による行動ミスを減らすことをねらいとしています。
+      </p>
+    </div>
+  </section>
+
+  <!-- 使い方 -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>使い方</h2>
+      <ol>
+        <li>やっちゃダメリスト（あつさヨケル！）ページを開いて「やっちゃダメ」「代わりにこうしよう」「危険サイン」を確認</li>
+        <li>その日の活動（登下校・部活・外活動）に合わせて対策を選ぶ</li>
+        <li>不安がある場合は、無理せず休憩・相談（必要なら119 / #7119）</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 利用シーン -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>利用シーン例</h2>
+      <ul>
+        <li><strong>登校前</strong>：今日は危険かを確認し、水分・帽子・休憩の準備を整える。</li>
+        <li><strong>部活動前</strong>：休憩の入れ方や塩分補給の目安を確認し、無理をしないラインを共有する。</li>
+        <li><strong>外活動・行事前</strong>：「今は休むべきか？」という不安が出たときに、すぐ確認できるナビとして活用。</li>
+      </ul>
+      <p>
+        高校生だけでなく、中学生や教職員、保護者、地域のイベントでも活用できる形を目指しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- 使用技術・制作環境 -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>使用技術・制作環境</h2>
+      <p>
+        本作品は、Google App script、公式LINE、Monaca Educationを組み合わせて構築したLINE BOTの機能です。
+      </p>
+      <ul>
+        <li>EPSON Endeavor NJ8000E (Windows 11)</li>
+        <li>Google App script（熱リポ機能のRAG検索）</li>
+        <li>公式LINE（利用者との対話インターフェース）</li>
+        <li>外部API：天気情報・気温・WBGT（暑さ指数）の取得</li>
+        <li>Monaca Education（Webページ制作・公開）</li>
+      </ul>
+      <p>
+        ユーザーの入力内容と環境データを組み合わせて危険度を判定し、
+        生成AIで「今取るべき行動」「避けるべき行動と代わりの行動」をわかりやすい文章として返す仕組みになっています。
+      </p>
+    </div>
+  </section>
+
+  <!-- 社会性・安全性への配慮 -->
+  <section id="scenes" class="section">
+    <div class="card">
+      <h2>社会性・安全性への配慮</h2>
+      <ul>
+        <li>個人情報を入力せずに利用できる設計とし、プライバシーに配慮しています。</li>
+        <li>医療行為や診断は行わず、「判断の材料」として情報を提示する位置づけにしています。</li>
+        <li>未成年が利用することを前提に、同意フローや表現にも配慮しています。</li>
+        <li>注意喚起だけでなく、「今どう行動すればよいか」を具体的に示すことを重視しています。</li>
+      </ul>
+      <p>
+        学校現場や家庭で安心して利用できるよう、「分かりやすさ」と「安全性」の両立を意識して設計しました。
+      </p>
+    </div>
+  </section>
+
+  <!-- アンケート導線 -->
+  <section id="survey" class="section">
+    <div class="card">
+      <h2>アンケートのお願い</h2>
+      <p>
+        熱中症対策ナビを、もっと見やすく・分かりやすくするためにアンケートを実施しています。
+        <br>回答は改善にのみ使用し、個人が特定される内容は求めません。
+      </p>
+
+      <ul class="survey-points">
+        <li>所要時間：1〜2分</li>
+        <li>内容：見やすさ／分かりやすさ／改善点</li>
+        <li>回答：匿名（個人情報は不要）</li>
+      </ul>
+
+      <a class="btn primary" href="https://forms.office.com/Pages/ResponsePage.aspx?id=IpygVJPVSkS1vBluMOSdTMYwzH4h0R1IqJm0OlLncIxUMk9MVDJCRFNPUlJGTkQ5RFRLMVVPV080VS4u" target="_blank" rel="noopener">
+        アンケートに回答する
+      </a>
+
+      <p class="small-note">※外部サイト（Microsoft Forms）が開きます。</p>
+    </div>
+  </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 検索対象の機能リスト
+    const FEATURES = [
+      {
+        label: "ナビについて",
+        keywords: ["ナビ", "概要", "説明", "about"],
+        type: "section",
+        targetId: "overview"
+      },
+      {
+        label: "LINE動作デモ",
+        keywords: ["動作デモ", "デモ", "line", "ライン"],
+        type: "url",
+        url: "demo.html"
+      },
+      {
+        label: "やっちゃダメリスト",
+        keywords: ["やっちゃダメ", "やっちゃダメリスト", "注意", "リスト", "do", "ダメリスト"],
+        type: "url",
+        url: "https://direct-preview-695a55d2e78885f605f99f30.monaca.education/#do"
+      },
+      {
+        label: "119通報",
+        keywords: ["119", "通報", "緊急", "救急", "119通報"],
+        type: "url",
+        url: "https://direct-preview-69686be5e788853347b4044d.monaca.education/"
+      },
+      {
+        label: "熱中症対策クイズ",
+        keywords: ["クイズ", "熱中症クイズ", "対策クイズ", "quiz"],
+        type: "url",
+        url: "https://direct-preview-695fb519e78885a66275e8c2.monaca.education/"
+      },
+      {
+        label: "全国情報コン応募作品として",
+        keywords: ["応募作品", "コンテスト", "全国情報コン"],
+        type: "section",
+        targetId: "contest"
+      },
+      {
+        label: "アンケート",
+        keywords: ["アンケート", "survey", "意見"],
+        type: "url",
+        url: "https://forms.office.com/Pages/ResponsePage.aspx?id=IpygVJPVSkS1vBluMOSdTMYwzH4h0R1IqJm0OlLncIxUMk9MVDJCRFNPUlJGTkQ5RFRLMVVPV080VS4u"
+      },
+        {
+         label: "天気予報",
+        keywords: ["天気予報", "天気", "あつさ天気予報"],
+        type: "url",
+        url: "https://direct-preview-696f30aae788859f27b4043c.monaca.education/"
+      }
+    ];
+
+    // DOM 取得
+    const searchInput  = document.getElementById("featureSearchInput");
+    const searchButton = document.getElementById("featureSearchButton");
+    const messageEl    = document.getElementById("featureSearchMessage");
+
+    if (!searchInput || !searchButton || !messageEl) {
+      // 要素が見つからない場合は何もしない
+      return;
+    }
+
+    // 全角スペース除去など、ゆるく正規化
+    function normalize(str) {
+      return (str || "")
+        .replace(/\s+/g, "")          // 半角スペース削除
+        .replace(/\u3000/g, "")       // 全角スペース削除
+        .toLowerCase();
+    }
+
+    function searchFeature() {
+      const raw = searchInput.value;
+      const q = normalize(raw);
+
+      messageEl.textContent = "";
+      messageEl.style.color = "#ef4444";
+
+      if (!q) {
+        messageEl.textContent = "キーワードを入力してください。";
+        return;
+      }
+
+      // マッチ判定
+      const hit = FEATURES.find((f) => {
+        const labelN = normalize(f.label);
+        if (labelN.includes(q) || q.includes(labelN)) return true;
+
+        return f.keywords.some((k) => {
+          const kn = normalize(k);
+          return kn && (kn.includes(q) || q.includes(kn));
+        });
+      });
+
+      if (!hit) {
+        messageEl.textContent = "該当する機能が見つかりませんでした。";
+        return;
+      }
+
+      // URL タイプ → 新しいタブで開く
+      if (hit.type === "url" && hit.url) {
+        window.open(hit.url, "_blank", "noopener");
+        messageEl.textContent = `「${hit.label}」を新しいタブで開きました。`;
+        messageEl.style.color = "#16a34a";
+        return;
+      }
+
+      // セクションタイプ → スクロール
+      if (hit.type === "section" && hit.targetId) {
+        const target = document.getElementById(hit.targetId);
+        if (!target) {
+          messageEl.textContent =
+            `「${hit.label}」の表示場所が見つかりませんでした（id="${hit.targetId}" を確認してください）。`;
+          return;
+        }
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        messageEl.textContent = `「${hit.label}」へ移動しました。`;
+        messageEl.style.color = "#16a34a";
+        return;
+      }
+
+      // どれにも当てはまらない保険
+      messageEl.textContent = "リンクの設定に問題があります。";
+    }
+
+    // 🔍ボタンクリック
+    searchButton.addEventListener("click", searchFeature);
+
+    // Enterキーでも検索
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        searchFeature();
+      }
+    });
+
+    // 初期ヒント（使えるキーワード表示）
+    messageEl.textContent =
+      "例）「ナビ」「デモ」「やっちゃダメ」「119」「クイズ」「コンテスト」「アンケート」などで検索できます。";
+    messageEl.style.color = "#6b7280";
+  });
+</script>
+ 
+</body>
+<footer class="footer">
+    <p>© Heat Safety Navigator / 熱中症対策ナビ</p>
+  </footer>
+</html>
